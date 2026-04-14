@@ -4,7 +4,7 @@
     "title": "interestelar",
     "genre": "ciencia ficcion",
     "year": 2014,
-    "image": "https://picsum.photos/seed/movie1/200/280",
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
     "link": "https://es.wikipedia.org/wiki/Interestelar"
   },
   {
@@ -12,7 +12,7 @@
     "title": "el padrino",
     "genre": "drama",
     "year": 1972,
-    "image": "https://picsum.photos/seed/movie2/200/280",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg",
     "link": "https://es.wikipedia.org/wiki/El_padrino"
   },
   {
@@ -20,7 +20,7 @@
     "title": "toy story",
     "genre": "animacion",
     "year": 1995,
-    "image": "https://picsum.photos/seed/movie3/200/280",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
     "link": "https://es.wikipedia.org/wiki/Toy_Story"
   },
   {
@@ -28,7 +28,7 @@
     "title": "matrix",
     "genre": "accion",
     "year": 1999,
-    "image": "https://picsum.photos/seed/movie4/200/280",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg",
     "link": "https://es.wikipedia.org/wiki/Matrix"
   },
   {
@@ -36,7 +36,7 @@
     "title": "parasite",
     "genre": "thriller",
     "year": 2019,
-    "image": "https://picsum.photos/seed/movie5/200/280",
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/53/Parasite_%282019_film%29.png",
     "link": "https://es.wikipedia.org/wiki/Parasite_(pel%C3%ADcula_de_2019)"
   },
   {
@@ -44,7 +44,7 @@
     "title": "coco",
     "genre": "familia",
     "year": 2017,
-    "image": "https://picsum.photos/seed/movie6/200/280",
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/90/Coco_%282017_film%29.png",
     "link": "https://es.wikipedia.org/wiki/Coco_(pel%C3%ADcula_de_2017)"
   }
 ]
