@@ -41,7 +41,7 @@ export const Saved = () => {
       <section>
         <h2>ver mas tarde</h2>
         {watchLater.length === 0 ? (
-          <p>no has agregado películas aun.</p>
+          <p>No has agregado películas aún.</p>
         ) : (
           <ul className="saved-list">
             {watchLater.map((m) => (
