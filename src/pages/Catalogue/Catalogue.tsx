@@ -8,7 +8,7 @@ const movies = moviesData as Movie[];
 export const Catalogue = () => {
   const ctx = useContext(MoviesContext);
   if (!ctx) return null;
-  const { addFavorite, addWatchLater } = ctx;
+  const { addFavorite, addWatchLater, favorites, watchLater } = ctx;
 
   return (
     <div className="page-movies">
@@ -18,32 +18,48 @@ export const Catalogue = () => {
       </nav>
       <h1>catalogo</h1>
       <ul className="movie-grid">
-        {movies.map((m) => (
-          <li key={m.id} className="movie-card">
-            {m.image && (
-              <a href={m.link} target="_blank" rel="noreferrer">
-                <img src={m.image} alt="" width={200} height={280} />
-              </a>
-            )}
-            <h2>{m.title}</h2>
-            <p>
-              {m.genre} · {m.year}
-            </p>
-            {m.link && (
-              <p>
-                <a href={m.link} target="_blank" rel="noreferrer">
-                  link
+        {movies.map((m) => {
+          const inFav = favorites.some((x) => x.id === m.id);
+          const inLater = watchLater.some((x) => x.id === m.id);
+          return (
+            <li key={m.id} className="movie-card">
+              {m.image && m.link && (
+                <a
+                  className="movie-poster-link"
+                  href={m.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="clic para ver mas informacion de la pelicula (otra pestaña)"
+                >
+                  <img src={m.image} alt="" width={200} height={280} />
                 </a>
+              )}
+              {m.image && !m.link && (
+                <img src={m.image} alt="" width={200} height={280} />
+              )}
+              <h2>{m.title}</h2>
+              <p>
+                {m.genre} · {m.year}
               </p>
-            )}
-            <button type="button" onClick={() => addFavorite(m)}>
-              Agregar a favoritos
-            </button>
-            <button type="button" onClick={() => addWatchLater(m)}>
-              Ver más tarde
-            </button>
-          </li>
-        ))}
+              <button
+                type="button"
+                className={inFav ? "btn-saved" : ""}
+                disabled={inFav}
+                onClick={() => addFavorite(m)}
+              >
+                {inFav ? "ya esta en favoritos" : "Agregar a favoritos"}
+              </button>
+              <button
+                type="button"
+                className={inLater ? "btn-saved" : ""}
+                disabled={inLater}
+                onClick={() => addWatchLater(m)}
+              >
+                {inLater ? "ya esta en ver mas tarde" : "Ver más tarde"}
+              </button>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

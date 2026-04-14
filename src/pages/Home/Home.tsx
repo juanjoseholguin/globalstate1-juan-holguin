@@ -8,10 +8,16 @@ export const Home = () => {
 
   return (
     <div>
-      <h1>
-        pagina de inicio holguin :D
-        {email ? ` ${email}` : ""}
-      </h1>
+      <h1>pagina de inicio holguin :D</h1>
+      {email ? (
+        <p className="home-session">
+          listo: entraste como <strong>{email}</strong>
+        </p>
+      ) : (
+        <p className="home-session home-session--guest">
+          aun no hay correo: ve a iniciar sesion para guardarlo
+        </p>
+      )}
       <nav className="nav-links">
         <Link to="/catalogue">catalogo</Link>
         <Link to="/saved">guardadass</Link>

@@ -1,16 +1,20 @@
 import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [, setPassword] = useState("");
+  const navigate = useNavigate();
   const ctx = useContext(UserContext);
   const setUserEmail = ctx?.setEmail;
 
-  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setUserEmail?.(email);
+    const trimmed = email.trim();
+    if (!trimmed) return;
+    setUserEmail?.(trimmed);
+    navigate("/");
   };
 
   return (
@@ -19,8 +23,12 @@ export const Login = () => {
         <Link to="/">inicio</Link>
         <Link to="/catalogue">catalogo</Link>
       </nav>
-      <form>
+      <p className="login-hint">
+        al enviar te lleva al inicio y ya queda tu correo guardado
+      </p>
+      <form onSubmit={handleSubmit}>
         <input
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="escribe tu email"
         />
@@ -29,9 +37,7 @@ export const Login = () => {
           placeholder="escribe tu contrasena"
           type="password"
         />
-        <button type="button" onClick={handleSubmit}>
-          iniciar sesion
-        </button>
+        <button type="submit">iniciar sesion</button>
       </form>
     </div>
   );
