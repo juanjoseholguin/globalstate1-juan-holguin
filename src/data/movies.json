@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Interestelar",
+    "genre": "Ciencia ficción",
+    "year": 2014,
+    "image": "https://picsum.photos/seed/movie1/200/280",
+    "link": "https://es.wikipedia.org/wiki/Interestelar"
+  },
+  {
+    "id": 2,
+    "title": "El Padrino",
+    "genre": "Drama",
+    "year": 1972,
+    "image": "https://picsum.photos/seed/movie2/200/280",
+    "link": "https://es.wikipedia.org/wiki/El_padrino"
+  },
+  {
+    "id": 3,
+    "title": "Toy Story",
+    "genre": "Animación",
+    "year": 1995,
+    "image": "https://picsum.photos/seed/movie3/200/280",
+    "link": "https://es.wikipedia.org/wiki/Toy_Story"
+  },
+  {
+    "id": 4,
+    "title": "Matrix",
+    "genre": "Acción",
+    "year": 1999,
+    "image": "https://picsum.photos/seed/movie4/200/280",
+    "link": "https://es.wikipedia.org/wiki/Matrix"
+  },
+  {
+    "id": 5,
+    "title": "Parasite",
+    "genre": "Thriller",
+    "year": 2019,
+    "image": "https://picsum.photos/seed/movie5/200/280",
+    "link": "https://es.wikipedia.org/wiki/Parasite_(pel%C3%ADcula_de_2019)"
+  },
+  {
+    "id": 6,
+    "title": "Coco",
+    "genre": "Familia",
+    "year": 2017,
+    "image": "https://picsum.photos/seed/movie6/200/280",
+    "link": "https://es.wikipedia.org/wiki/Coco_(pel%C3%ADcula_de_2017)"
+  }
+]
