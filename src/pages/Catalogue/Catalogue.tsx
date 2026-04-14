@@ -37,10 +37,10 @@ export const Catalogue = () => {
               </p>
             )}
             <button type="button" onClick={() => addFavorite(m)}>
-              agregar a favoritos
+              Agregar a favoritos
             </button>
             <button type="button" onClick={() => addWatchLater(m)}>
-              ver mas tarde
+              Ver más tarde
             </button>
           </li>
         ))}
